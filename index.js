@@ -63,4 +63,3 @@ client.on('messageCreate', message => {
 });
 
 client.login(process.env.BOT_TOKEN);
-//test
