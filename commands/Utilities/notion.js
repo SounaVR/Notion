@@ -29,7 +29,7 @@ exports.run = async (client, message, args) => {
                 new MessageEmbed()
                 .setDescription(`Titre: ${page.properties.Name.title[0].text.content}\nDescription: ${page.properties.Description.rich_text[0].plain_text}`)
                 .addField('Date :', moment(page.properties.Date.date.start).format('L'))
-                .addField('Tags :', `${tags}`)
+                .addField('Tags :', `${tags.splice(0, 4)}`)
                 );
             });
 
@@ -78,5 +78,5 @@ exports.run = async (client, message, args) => {
 exports.help = {
     name: "notion",
     description: "Notion things",
-    category: "utilities"  
+    category: "Utilities"  
 };
