@@ -33,6 +33,8 @@ exports.run = async (client, message, args) => {
                 );
             });
 
+            if (myEmbedArray.length == "0") return message.reply("Y'a plus de vidéos pour le moment :sadge:");
+
             const builder = new EmbedBuilder()
                 .changeChannel(message.channel)
                 .defaultReactions(['back', 'stop', 'next'])
